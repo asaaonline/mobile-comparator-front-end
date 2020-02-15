@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
+import {SearchService} from '../../services/search.service';
 
 @Component({
   selector: 'app-search-result-page',
@@ -8,18 +9,15 @@ import {ActivatedRoute, Params} from '@angular/router';
 })
 export class SearchResultPageComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private searchService: SearchService) {
+  }
 
   ngOnInit() {
 
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       console.log(params);
-      // this.request.searchKeyWord = params['searchKeyWord'];
-      // this.request.endPrice = params['endPrice'];
-      // this.request.itemPerPage = params['itemPerPage'];
-      // this.request.startPrice = params['startPrice'];
-      // this.request.sortBy = params['sortBy'];
-      // this.productSearchService.search(this.request);
+
+this.searchService.search(params['searchKeyWord']);
     });
 
   }

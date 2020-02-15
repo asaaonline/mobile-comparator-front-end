@@ -16,7 +16,7 @@
           <div class="header_search_content">
             <div class="header_search_form_container">
               <form [formGroup]="searchPanelForm" (ngSubmit)="onSubmit()" class="header_search_form clearfix">
-                <input  type="search" required="required" class="header_search_input" placeholder="Search for mobile...">
+                <input formControlName="searchKeyWord" type="search" required="required" class="header_search_input" placeholder="Search for mobile...">
                 <div class="custom_dropdown">
                   <select class="custom_dropdown_list">
                     <span class="custom_dropdown_placeholder clc">All Categories</span>

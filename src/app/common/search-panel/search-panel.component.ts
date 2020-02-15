@@ -22,7 +22,7 @@ export class SearchPanelComponent implements OnInit {
 
   onSubmit() {
 
-      this.router.navigate(['search'], {queryParams: {searchKeyWord: this.searchPanelForm.value.searchKeyWord}});
+      this.router.navigate(['search'], {queryParams: {searchKeyWord: this.searchPanelForm.value.searchKeyWord}, queryParamsHandling: 'merge'});
 
 
   }

@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+<div [ngClass]="{homePageSearchComponent:router.url==='/'}" class="">
+  <app-search-panel></app-search-panel>
+  <router-outlet></router-outlet>
+</div>
+

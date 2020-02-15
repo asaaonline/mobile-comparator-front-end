@@ -7,11 +7,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {HomePageComponent} from './home-page/home-page.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import {SearchPanelComponent} from './common/search-panel/search-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    SearchPanelComponent
   ],
   imports: [
     BrowserModule,

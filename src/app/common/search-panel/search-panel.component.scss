@@ -1,3 +1,13 @@
 .header_main{
   width: 1200px!important;
 }
+
+.custom_dropdown_list {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f7f7f;
+  background: white;
+  border: none;
+}

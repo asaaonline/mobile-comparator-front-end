@@ -1,5 +1,5 @@
 
-<div class="header_main">
+<div [ngClass]="{header_main_Home:router.url==='/'}" class="header_main">
   <div class="container">
     <div class="row">
 
@@ -15,7 +15,7 @@
         <div class="header_search">
           <div class="header_search_content">
             <div class="header_search_form_container">
-              <div class="header_search_form clearfix">
+              <form [formGroup]="searchPanelForm" (ngSubmit)="onSubmit()" class="header_search_form clearfix">
                 <input  type="search" required="required" class="header_search_input" placeholder="Search for mobile...">
                 <div class="custom_dropdown">
                   <select class="custom_dropdown_list">
@@ -32,7 +32,7 @@
                   </select>
                 </div>
                 <button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

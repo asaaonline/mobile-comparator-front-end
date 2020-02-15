@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 export class AppComponent {
   title = 'mobile-comparator-front-end';
 
-  constructor(private router: Router){
+  constructor(private router: Router) {
     console.log(router);
   }
 

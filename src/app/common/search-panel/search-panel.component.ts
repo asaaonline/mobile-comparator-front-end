@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
+import {SearchService} from '../../services/search.service';
 
 @Component({
   selector: 'app-search-panel',
@@ -9,14 +11,20 @@ import {FormGroup} from '@angular/forms';
 export class SearchPanelComponent implements OnInit {
   searchPanelForm: FormGroup;
 
+  constructor(private productSearchService: SearchService, private router: Router) {
+  }
 
   ngOnInit() {
-
+    this.searchPanelForm = new FormGroup({
+      'searchKeyWord': new FormControl(null),
+    })
   }
 
   onSubmit() {
 
-    // this.productSearchService.changeSearchKeyWord(this.searchPanelForm);
+      this.router.navigate(['search'], {queryParams: {searchKeyWord: this.searchPanelForm.value.searchKeyWord}});
+
+
   }
 
 }

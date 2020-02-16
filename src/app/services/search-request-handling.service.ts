@@ -9,7 +9,7 @@ export class SearchRequestHandlingService {
   constructor(private http: HttpClient) {
   }
 
-  sendRequest(searchKey: any, url: string) {
+  public sendRequest(searchKey: any, url: string) {
 
     let param = new HttpParams();
     param = param.set('searchKeyWord', searchKey);
@@ -18,6 +18,18 @@ export class SearchRequestHandlingService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       }), params: param
+    };
+
+    return this.http.get(url, httpOptions);
+  }
+
+  public sendGetRequest( url: string) {
+
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     };
 
     return this.http.get(url, httpOptions);

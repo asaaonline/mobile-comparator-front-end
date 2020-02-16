@@ -23,11 +23,10 @@
                     <i class="fas fa-chevron-down"></i>
 <!--                    <div class="custom_list clc">-->
                       <option><a class="clc" href="#">All Categories</a></option>
-                      <option><a class="clc" href="#">Nokia</a></option>
-                      <option><a class="clc" href="#">Sony</a></option>
-                      <option><a class="clc" href="#">Huawei</a></option>
-                      <option><a class="clc" href="#">Eriction</a></option>
-                      <option><a class="clc" href="#">motrola</a></option>
+
+                      <option *ngFor="let item of category"><a class="clc" href="#">{{item.brandName}}</a></option>
+
+
 <!--                    </div>-->
                   </select>
                 </div>

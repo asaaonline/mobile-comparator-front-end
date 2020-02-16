@@ -16,7 +16,7 @@ export class SearchPanelComponent implements OnInit {
 
   ngOnInit() {
     this.searchPanelForm = new FormGroup({
-      'searchKeyWord': new FormControl(null),
+      'searchKeyWord': new FormControl(""),
     })
   }
 

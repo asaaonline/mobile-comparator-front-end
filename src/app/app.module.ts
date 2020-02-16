@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {SearchPanelComponent} from './common/search-panel/search-panel.component';
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 import { ItemCardComponent } from './pages/search-result-page/item-card/item-card.component';
+import { SingleItemViewComponent } from './pages/single-item-view/single-item-view.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ItemCardComponent } from './pages/search-result-page/item-card/item-car
     HomePageComponent,
     SearchPanelComponent,
     SearchResultPageComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    SingleItemViewComponent
   ],
   imports: [
     BrowserModule,

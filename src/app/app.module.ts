@@ -12,6 +12,7 @@ import { SearchResultPageComponent } from './pages/search-result-page/search-res
 import { ItemCardComponent } from './pages/search-result-page/item-card/item-card.component';
 import { SingleItemViewComponent } from './pages/single-item-view/single-item-view.component';
 import {MobilePriceCardComponent} from './pages/single-item-view/mobile-price-card/mobile-price-card.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MobilePriceCardComponent} from './pages/single-item-view/mobile-price-ca
     SearchResultPageComponent,
     ItemCardComponent,
     SingleItemViewComponent,
-    MobilePriceCardComponent
+    MobilePriceCardComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

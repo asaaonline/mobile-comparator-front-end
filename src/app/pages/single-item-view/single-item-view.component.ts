@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Params} from '@angular/router';
+import {SearchResult} from '../../model/search-respons/search-result';
+import {PhoneService} from '../../services/phone.service';
 
 @Component({
   selector: 'app-single-item-view',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleItemViewComponent implements OnInit {
 
-  constructor() { }
+  result: SearchResult;
+
+  constructor(private activatedRoute: ActivatedRoute, private  phoneService: PhoneService) {
+  }
 
   ngOnInit() {
+
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+      console.log(params);
+      this.phoneService.getPhoneDetails(params['item_id']);
+    });
+
+    this.phoneService.responeseShopPriceList.subscribe((searchResult: SearchResult) => {
+      console.log(searchResult);
+      this.result = searchResult.result;
+
+    });
+
   }
 
 

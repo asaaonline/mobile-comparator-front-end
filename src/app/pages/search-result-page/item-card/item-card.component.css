@@ -7,7 +7,7 @@
 }
 .item__picture {
   height: 200px;
-  border: 1px solid #dadada;
+  border-right: 1px solid #dadada;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -40,4 +40,8 @@
 .item_brand {
   font-size: 14px;
   margin-bottom: 12px;
+}
+
+.item__image{
+  height: inherit;
 }

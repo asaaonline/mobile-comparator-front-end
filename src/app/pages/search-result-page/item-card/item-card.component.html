@@ -1,8 +1,8 @@
 <div (click)="onSubmit(item.id)" class="item__card">
   <div  class="row item__row">
     <div class="col-3 item__picture">
-      this is picture
-      <img src={{item.pictureUrl}}>
+
+      <img class="item__image" src={{item.url}}>
     </div>
     <div class="col-9 item__details">
     <div class="item__title">{{item.name|uppercase}}</div>

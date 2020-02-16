@@ -9,13 +9,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SearchPanelComponent} from './common/search-panel/search-panel.component';
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
+import { ItemCardComponent } from './pages/search-result-page/item-card/item-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     SearchPanelComponent,
-    SearchResultPageComponent
+    SearchResultPageComponent,
+    ItemCardComponent
   ],
   imports: [
     BrowserModule,

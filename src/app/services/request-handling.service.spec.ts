@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RequestHandlingService } from './request-handling.service';
+import { SearchRequestHandlingService } from './search-request-handling.service';
 
-describe('RequestHandlingService', () => {
+describe('SearchRequestHandlingService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: RequestHandlingService = TestBed.get(RequestHandlingService);
+    const service: SearchRequestHandlingService = TestBed.get(SearchRequestHandlingService);
     expect(service).toBeTruthy();
   });
 });

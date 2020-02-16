@@ -12,4 +12,5 @@ export class SingleItemViewComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

@@ -23,7 +23,7 @@ export class SingleItemViewComponent implements OnInit {
     });
 
     this.phoneService.responeseShopPriceList.subscribe((searchResult: SearchResult) => {
-      console.log(searchResult);
+      console.log(searchResult.result[1]);
       this.result = searchResult.result;
 
     });

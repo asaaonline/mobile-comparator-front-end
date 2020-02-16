@@ -11,6 +11,8 @@ import {SearchPanelComponent} from './common/search-panel/search-panel.component
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 import { ItemCardComponent } from './pages/search-result-page/item-card/item-card.component';
 import { SingleItemViewComponent } from './pages/single-item-view/single-item-view.component';
+import {MobilePriceCardComponent} from './pages/single-item-view/mobile-price-card/mobile-price-card.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { SingleItemViewComponent } from './pages/single-item-view/single-item-vi
     SearchPanelComponent,
     SearchResultPageComponent,
     ItemCardComponent,
-    SingleItemViewComponent
+    SingleItemViewComponent,
+    MobilePriceCardComponent
   ],
   imports: [
     BrowserModule,

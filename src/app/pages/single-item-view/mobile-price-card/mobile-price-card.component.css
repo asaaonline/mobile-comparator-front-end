@@ -1,0 +1,24 @@
+.price__card__main {
+  min-height: 100px;
+  margin-top: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.price__card__main:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.12), 0 2px 13px rgba(0, 0, 0, 0.24);
+}
+
+.shop__name{
+  color: #df3b3b;
+  font-size: 15;
+}
+
+.shop__address{
+  font-size: 12px;
+}
+
+.shop__tell{
+  font-size: 12px;
+}

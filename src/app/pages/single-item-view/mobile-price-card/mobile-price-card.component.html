@@ -1,3 +1,14 @@
-<p>
-  mobile-price-card works!
-</p>
+<div class="price__card__main row align-items-center">
+<div class="col-lg-3">
+  <img src={{item.url}}>
+</div>
+<div class="col-lg-6">
+  <div class="container">
+  <div class="row shop__name"> {{item.name}}</div>
+  <div class="row shop__address">{{item.address}}</div>
+  <div class="row shop__tell">Tell:{{item.tell}}</div>
+  </div>
+</div>
+<div class="col-lg-3 ">Rs {{item.price}}</div>
+
+</div>

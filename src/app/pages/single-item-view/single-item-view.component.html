@@ -19,8 +19,8 @@
       </div>
     </div>
   </div>
-  <div class="bottom__row row">
-    <div *ngFor="let item of result[1]">
+  <div class="bottom__row row"*ngIf="result">
+    <div class="container" *ngFor="let item of result[0]">
       <app-mobile-price-card [item]="item"></app-mobile-price-card>
     </div>
   </div>

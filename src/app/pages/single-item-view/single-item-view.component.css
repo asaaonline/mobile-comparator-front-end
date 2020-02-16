@@ -1,9 +1,10 @@
 .top__row {
-  min-height: 500px;
+  min-height: 400px;
 }
 
 .main__con{
   top:50px;
+max-width: 900px;
 }
 
 .title{

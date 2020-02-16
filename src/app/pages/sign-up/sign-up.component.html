@@ -1,3 +1,15 @@
-<p>
-  sign-up works!
-</p>
+<div id='container'>
+  <div class='signup'>
+    <form [formGroup]="registerForm">
+      <input  formControlName="firstName" type='text' placeholder='First:'/>
+      <input formControlName="lastName"  type='text' placeholder='Last:'/>
+      <input formControlName="password"  type='password' placeholder='Password:'/>
+      <input formControlName="address"  type='text' placeholder='Address:'/>
+      <input formControlName="email"  type='text' placeholder='Email:'/>
+      <input formControlName="tell"  type='text' placeholder='Phone:'/>
+
+      <input  type='submit' (click)="submit()" placeholder='SUBMIT'/>
+    </form>
+  </div>
+
+</div>

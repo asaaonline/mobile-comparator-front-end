@@ -1,6 +1,6 @@
-<div class="price__card__main row align-items-center">
+<div class="price__card__main row align-items-center" *ngIf="item&&item.storeEntity">
 <div class="col-lg-3">
-  <img src={{item.url}}>
+  <img src={{item.storeEntity.imgUrl}}>
 </div>
 <div class="col-lg-6">
   <div class="container">
@@ -9,6 +9,6 @@
   <div class="row shop__tell">Tell:{{item.storeEntity.tell}}</div>
   </div>
 </div>
-<div class="col-lg-3 ">Rs {{item.storeEntity.price}}</div>
+<div class="col-lg-3 ">Rs {{item.price}}</div>
 
 </div>

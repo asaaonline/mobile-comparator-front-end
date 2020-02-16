@@ -12,7 +12,7 @@ export class ItemCardComponent implements OnInit {
   @Input()
   item: Product;
 
-  constructor(private router:Router) {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {

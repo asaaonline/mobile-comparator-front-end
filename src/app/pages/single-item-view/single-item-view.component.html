@@ -2,25 +2,25 @@
   <div class="top__row row">
     <div class="image__div col-4">
       <img style="max-width:100%;"
-           src={{result[1].url}}/>
+           src={{result[0].url}}/>
     </div>
     <div class="details__div col-8" *ngIf="result">
       <div class="title">
-        <h3>{{result[1].brand.brandName + " " + result[1].name}}</h3>
+        <h3>{{result[0].brand.brandName + " " + result[0].name}}</h3>
       </div>
 
       <div class="itm__details">
         <ul>
-          <li>primary cam {{result[1].primaryCamera}}Mp</li>
-          <li>secondry cam {{result[1].secondryCam}}Mp</li>
-          <li>procesor speed {{result[1].prosesorSpeed}}GHz</li>
-          <li>ram {{result[1].ram}}Gb</li>
+          <li>primary cam {{result[0].primaryCamera}}Mp</li>
+          <li>secondry cam {{result[0].secondryCam}}Mp</li>
+          <li>procesor speed {{result[0].prosesorSpeed}}GHz</li>
+          <li>ram {{result[0].ram}}Gb</li>
         </ul>
       </div>
     </div>
   </div>
   <div class="bottom__row row"*ngIf="result">
-    <div class="container" *ngFor="let item of result[0]">
+    <div class="container" *ngFor="let item of result[1]">
       <app-mobile-price-card [item]="item"></app-mobile-price-card>
     </div>
   </div>

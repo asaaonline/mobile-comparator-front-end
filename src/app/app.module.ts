@@ -13,6 +13,7 @@ import { ItemCardComponent } from './pages/search-result-page/item-card/item-car
 import { SingleItemViewComponent } from './pages/single-item-view/single-item-view.component';
 import {MobilePriceCardComponent} from './pages/single-item-view/mobile-price-card/mobile-price-card.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     ItemCardComponent,
     SingleItemViewComponent,
     MobilePriceCardComponent,
-    SignUpComponent
+    SignUpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

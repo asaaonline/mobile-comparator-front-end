@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
-import {SearchResult} from '../../model/search-respons/search-result';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +11,7 @@ import {SearchResult} from '../../model/search-respons/search-result';
 export class SignUpComponent implements OnInit {
   registerForm: FormGroup;
 
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService, private route: Router) {
   }
 
   ngOnInit() {
@@ -27,11 +27,20 @@ export class SignUpComponent implements OnInit {
     });
   }
 
-  submit() {
-    this.auth.register(this.registerForm).subscribe(
-      (response: SearchResult) => {
+  async submit() {
+    let object = await this.auth.register(this.registerForm);
+    console.log(object);
+    if (object['status'] = 'successful') {
 
-      }
-    );
+      this.route.navigate(['']);
+    }
+    this.registerForm.reset({
+      firstName: '',
+      lastName: '',
+      password: '',
+      address: '',
+      email: '',
+      tell: '',
+    });
   }
 }

@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {FormGroup} from '@angular/forms';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {SIGN_UP_URL} from '../constants';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class AuthService {
       tel: registerForm.value.tell,
       address: registerForm.value.address,
       password: registerForm.value.password,
+      email: registerForm.value.email
     };
 
 
@@ -26,7 +28,7 @@ export class AuthService {
       })
     };
 
-    return this.http.post(body, httpOptions);
+    return this.http.post(SIGN_UP_URL, body, httpOptions).toPromise();
 
   }
 }

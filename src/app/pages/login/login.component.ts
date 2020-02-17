@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
     let object = await this.auth.login(this.loginForm);
     console.log(object);
     if (object['status'] === "successful") {
-      this.cookieService.set('user', object.toString());
+      this.cookieService.set('user', object["result"].id);
+      this.cookieService.set('userName', JSON.stringify(object['result']));
       this.route.navigate(['']);
     }
     this.loginForm.reset({

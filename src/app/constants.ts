@@ -4,3 +4,4 @@ export const SINGLE_MOBILE_GET_URL = BASE_URL + '/phone/getById/';
 export const CATEGORY_GET_URL = BASE_URL + '/category/get';
 export const SIGN_UP_URL = BASE_URL + '/auth/register';
 export const LOGIN_URL = BASE_URL + '/auth/login';
+export const GET_FAVORITE_URL = BASE_URL + '/favorite/get/';

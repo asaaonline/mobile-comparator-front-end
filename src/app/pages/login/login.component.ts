@@ -3,6 +3,8 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {el} from '@angular/platform-browser/testing/src/browser_util';
+import {CookieService} from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import {el} from '@angular/platform-browser/testing/src/browser_util';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private auth: AuthService, private route: Router) {
+  constructor(private auth: AuthService, private route: Router,private cookieService: CookieService) {
 
   }
 
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
     let object = await this.auth.login(this.loginForm);
     console.log(object);
     if (object['status'] === "successful") {
-
+      this.cookieService.set('user', object.toString());
       this.route.navigate(['']);
     }
     this.loginForm.reset({

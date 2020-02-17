@@ -15,7 +15,7 @@ import {MobilePriceCardComponent} from './pages/single-item-view/mobile-price-ca
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FavoritsComponent } from './pages/favorits/favorits.component';
-
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { FavoritsComponent } from './pages/favorits/favorits.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

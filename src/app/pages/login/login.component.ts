@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
-import {el} from '@angular/platform-browser/testing/src/browser_util';
 import {CookieService} from 'ngx-cookie-service';
 
 
@@ -14,7 +13,7 @@ import {CookieService} from 'ngx-cookie-service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private auth: AuthService, private route: Router,private cookieService: CookieService) {
+  constructor(private auth: AuthService, private route: Router, private cookieService: CookieService) {
 
   }
 
@@ -30,8 +29,8 @@ export class LoginComponent implements OnInit {
   async submit() {
     let object = await this.auth.login(this.loginForm);
     console.log(object);
-    if (object['status'] === "successful") {
-      this.cookieService.set('user', object["result"].id);
+    if (object['status'] === 'successful') {
+      this.cookieService.set('user', object['result'].id);
       this.cookieService.set('userName', JSON.stringify(object['result']));
       this.route.navigate(['']);
     }

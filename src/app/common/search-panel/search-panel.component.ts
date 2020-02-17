@@ -58,5 +58,9 @@ export class SearchPanelComponent implements OnInit, DoCheck {
 
   }
 
+  logOut() {
+    this.cookieService.deleteAll();
+    this.router.navigate(['']);
+  }
 }
 

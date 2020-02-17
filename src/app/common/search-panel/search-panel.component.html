@@ -36,11 +36,28 @@
         </div>
       </div>
 
-      <div class="col-lg-2 order-4">
+      <div *ngIf="logedIn" class="col-lg-1 order-4">
         <div class="logo_container">
-          <div *ngIf="logedIn" class="logo"><a routerLink="favorite" routerLinkActive="active"><img class="logo__favorite" src="assets/favorite.png"></a></div>
+          <div  class="logo"><a routerLink="favorite" routerLinkActive="active"><img class="logo__favorite" src="assets/favorite.png"></a></div>
         </div>
       </div>
+      <div *ngIf="!logedIn" class="col-lg-1 order-4">
+        <div class="logo_container">
+          <div class="logo"><a routerLink="login" routerLinkActive="active"><img class="logo__favorite" src="assets/login.jpeg"></a></div>
+        </div>
+      </div>
+      <div *ngIf="!logedIn" class="col-lg-1 order-4">
+        <div class="logo_container">
+          <div class="logo" ><a routerLink="sign_up"  routerLinkActive="active"><img class="logo__favorite" src="assets/register.png"></a></div>
+        </div>
+      </div>
+      <div *ngIf="logedIn"  class="col-lg-1 order-4">
+        <div class="logo_container">
+          <div class="logo" (click)="logOut()"><a  routerLinkActive="active"><img class="logo__favorite" src="assets/logOut.png"></a></div>
+        </div>
+      </div>
+
+
 
     </div>
   </div>

@@ -1,3 +1,10 @@
-<p>
-  login works!
-</p>
+<div id='container'>
+  <div class='signup'>
+    <form [formGroup]="loginForm">
+      <input  formControlName="userName" type='text' placeholder='First:'/>
+      <input formControlName="password"  type='password' placeholder='Password:'/>
+      <input  type='submit' (click)="submit()" placeholder='SUBMIT'/>
+    </form>
+  </div>
+
+</div>

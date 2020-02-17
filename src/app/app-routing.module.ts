@@ -5,6 +5,7 @@ import {SearchResultPageComponent} from './pages/search-result-page/search-resul
 import {SingleItemViewComponent} from './pages/single-item-view/single-item-view.component';
 import {SignUpComponent} from './pages/sign-up/sign-up.component';
 import {LoginComponent} from './pages/login/login.component';
+import {FavoritsComponent} from './pages/favorits/favorits.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'item', component: SingleItemViewComponent},
   {path: 'sign_up', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'favorite', component: FavoritsComponent},
 
 ];
 

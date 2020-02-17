@@ -14,6 +14,7 @@ import { SingleItemViewComponent } from './pages/single-item-view/single-item-vi
 import {MobilePriceCardComponent} from './pages/single-item-view/mobile-price-card/mobile-price-card.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
+import { FavoritsComponent } from './pages/favorits/favorits.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoginComponent } from './pages/login/login.component';
     SingleItemViewComponent,
     MobilePriceCardComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    FavoritsComponent
   ],
   imports: [
     BrowserModule,

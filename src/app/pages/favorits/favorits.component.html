@@ -1,0 +1,23 @@
+<div class="shop">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="shop_content">
+          <div class="shop_bar clearfix">
+
+          </div>
+
+          <div *ngFor="let item of favorite">
+            <app-item-card  class="itm_crd" [item]="item"></app-item-card>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

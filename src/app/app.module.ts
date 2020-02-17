@@ -16,6 +16,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FavoritsComponent } from './pages/favorits/favorits.component';
 import {CookieService} from 'ngx-cookie-service';
+import { FavoriteCardComponent } from './pages/favorits/favorite-card/favorite-card.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {CookieService} from 'ngx-cookie-service';
     MobilePriceCardComponent,
     SignUpComponent,
     LoginComponent,
-    FavoritsComponent
+    FavoritsComponent,
+    FavoriteCardComponent
   ],
   imports: [
     BrowserModule,

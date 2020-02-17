@@ -1,0 +1,22 @@
+<div (click)="onSubmit(item.id)" class="item__card">
+  <div  class="row item__row">
+    <div class="col-3 item__picture">
+
+      <img class="item__image" src={{item.url}}>
+    </div>
+    <div class="col-9 item__details">
+      <div class="item__title">{{item.name|uppercase}}</div>
+      <div class="item_brand">{{item.brand.brandName}}</div>
+      <div class="item__specification">
+        <ul>
+          <li>Ram:{{item.ram}}</li>
+          <li>Front cam:{{item.primaryCamera}}</li>
+          <li>Rear cam:{{item.secondryCam}}</li>
+          <li>Processor: {{item.prosesorSpeed}}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+.item__card{
+  border-bottom: 1px solid #dadada;
+  height: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+.item__picture {
+  height: 200px;
+  border-right: 1px solid #dadada;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item__details {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.item__row {
+  margin: 0;
+}
+
+.item__row {
+
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.item__row:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.12), 0 2px 13px rgba(0, 0, 0, 0.24);
+}
+
+.item__title{
+  color: #df3b3b;
+  font-size: 18px;
+}
+
+.item_brand {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.item__image{
+  height: inherit;
+}
